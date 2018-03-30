@@ -31,9 +31,17 @@ RAW264_7_v3.xml
 ## Литература
 1. Aarash Bordbar et al., (2012)  Model-driven multi-omic data analysis elucidates metabolic immunomodulators of macrophage activation.
   Molecular Systems Biology 8:558
-2. Natalie C. Duarte et al., (2006), Global reconstruction of the human metabolic network based on genomic and bibliomic data.
+2. Natalie C. Duarte et al., (2006) Global reconstruction of the human metabolic network based on genomic and bibliomic data.
   PNAS 104(6):1777–1782
-3. 
+3. P. Kent Langston et al., (2017) Metabolism Supports Macrophage Activation. Front. Immunol. 8:61.
+4. Silvia Galván-Peña and Luke A. J. O’Neill (2014) Metabolic reprograming in macrophage polarization. Frontiers in Immunology, Inflammation 5:420:2
+5. Ryan DG, O’Neill LA. (doi: 10.1002/1873-3468.12744)
+6. Anna S. Blazier and Jason A. Papin. (2012) Integration of expression data in genome-scale metabolic network reconstructions. Front.      Physiol. 3:299
+7. Jeffrey D Orth et al., (2010) What is flux balance analysis? nature biotechnology 28(3): 245-248
+
+
+
+
 
 
 
