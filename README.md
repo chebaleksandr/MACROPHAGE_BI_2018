@@ -52,6 +52,13 @@ Number of genes in the model 768
 ```
 mdl=cobra.io.read_sbml_model('/home/aleksandr/Downloads/RAW264_7_v3.xml')
 ```
+##### В данном скрипте для визуализации полученного решения используется модель RECON1.COMBINED.json
+
+```
+json_string = urllib.request.urlopen("https://raw.githubusercontent.com/escher/community-maps/master/RECON1/RECON1.COMBINED.json").read().decode('utf-8')
+RECON = json.loads(json_string)
+```
+
 ##### Данный скрипт позволяет прочитать модель из xml файла, и прочитать карту из json файла, а также осуществить визуализацию при помощи библиотеки Escher. Также функция react_resemblance, позволяет сравнить различия в количестве реакций между картой и моделью.
 
 
