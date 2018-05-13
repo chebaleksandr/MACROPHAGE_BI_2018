@@ -1,41 +1,41 @@
-# Проект "Изучение и разработка метаболической модели макрофагов"
-## Студенты: А.А.Чеблоков, Н.П.Родина
-## Руководители: А.Н. Гайнуллина, А.А. Сергушичев
+# Project "Investigation and development of the matabolic macrophage model"
+## Students: А.А.Cheblockov, N.P.Rodina
+## Supervisord: А.Н. Гайнуллина, А.А. Сергушичев
 
-## Краткое описание проекта
+## Short project description
 
-##### Макрофаги — клетки первой линии иммунной защиты: уничтожают патогены (М1), поддерживают тканевой гомеостазис (М2).
-##### Использование метаболической FBA-модели позволяет увидеть координацию между метаболическими путями на уровне целой клетки. Однако существующая FBA-модель метаболизма макрофагов имеет ряд неточностей, в связи с чем она не отражает самые последние представления об их М1-активации, сформулированные в ходе молекулярно-биологических экспериментов.
+##### Macrophages - cells of the first line of immune defense: destroy pathogens (M1), maintain tissue homeostasis (M2).
+##### The use of the metabolic FBA model allows one to see the coordination between the metabolic pathways at the level of the whole cell. However, the existing FBA model of macrophage metabolism has a number of inaccuracies, and therefore it does not reflect the latest ideas about their M1 activation, formulated in the course of molecular biological experiments.
 
-### Целью настоящего проекта является обнаружить и исправить неточности FBA-модель метаболизма макрофагов.
+### The aim of the project is to detect and fix the incorrectnesses of the FBA-model of macrophage metabolism.
 
-## Краткое описание использованных методов
+## Short description of the used methods
 
-##### Метод: FBA (flux balance analysis): В условиях допущенного нами стационарного состояния результат умножения стехиометрической матрицы, составленной из всех реакций клетки, на скорость потоков через эти реакции равен нулю.
+##### Method: FBA (flux balance analysis): Under the conditions of our steady state, the result of multiplying the stoichiometric matrix, composed of all the cell responses, by the flow rate through these reactions is zero.
 
-## Содержимое репозитория
+## Contents of the repository
 
-##### Данный репозиторий содержит всю актуальную на 31.03.2018 информацию по выполнению проекта:
-##### используемые модели,
-##### скрипты,
-##### описание версий используемых программ
+##### This repository contains all the information relevant to the project's implementation as of March 31, 2013:
+##### used models,
+##### skripts,
+##### description of the versions of the used soft
 
-## Использованные в работе модели 
+## Models used in the project 
 
-##### Метаболическая модель макрофага (doi:10.1038/msb.2012.21)
+##### Metabolic macrophage model (doi:10.1038/msb.2012.21)
 ##### RAW264_7_v2.xml
 ##### RAW264_7_v3.xml
 
-## Скрипты
-#### IB_project_30_03_18.py (Н.Родина):
-##### Для запуска скрипта необходимо скачать требуемую модель, установить все необходимые библиотеки (см.раздел Использованные программы), а также изменить в скрипте путь к модели для своего компьютера:
+## Skipts
+#### IB_project_30_03_18.py (N.Rodina):
+##### To run the script, you must download the required model, install all necessary libraries (see the Used programs section), and also change the path to the model for your computer in the script:
 
 ```
 #reading the model
 data_dir = cobra.test.data_dir
 model = cobra.io.read_sbml_model(join(data_dir, "D:/Institute for bioinformatics/Project_sem2/RAW264_7_v2.xml"))
 ```
-##### Данный скрипт позволяет прочитать используемую модель, а также получить всю необходимую о ней информацию (количество реакций, метаболитов и др.). Также данный скрипт позволяет провести FBA и FVA анализ. Результаты FVA анализа выводятся в csv файл. 
+##### This script allows you to read the used model, as well as get all the information about it (the number of reactions, metabolites, etc.). Also, this script allows you to conduct FBA and FVA analysis. The results of the FVA analysis are output to the csv file.
 
 ```
 Number of reactions in the model 1398
@@ -44,34 +44,32 @@ Number of genes in the model 768
 <Solution 0.000 at 0xa1f91f3da0>
 <Solution 0.062 at 0xa1f93b7e48>
 ```
-##### Результаты FVA анализа выводятся в csv файл (out.csv).
+##### Results of the FVA-analysis are written to a csv-file (out.csv).
 
-##### Macrophage_Model.py (А. Чеблоков): 
-##### Для запуска скрипта необходимо скачать требуемую модель, установить все необходимые библиотеки (см.раздел Использованные программы), а также изменить в скрипте путь к модели для своего компьютера:
-
+##### Macrophage_Model.py (А. Cheblokov): 
+##### To run the script, you must download the required model, install all necessary libraries (see the Used programs section), and also change the path to the model for your computer in the script:
 ```
 mdl=cobra.io.read_sbml_model('/home/aleksandr/Downloads/RAW264_7_v3.xml')
 ```
-##### В данном скрипте для визуализации полученного решения используется модель RECON1.COMBINED.json
+##### In this script, the model RECON1.COMBINED.json is used to visualize the resulting solution
 
 ```
 json_string = urllib.request.urlopen("https://raw.githubusercontent.com/escher/community-maps/master/RECON1/RECON1.COMBINED.json").read().decode('utf-8')
 RECON = json.loads(json_string)
 ```
 
-##### Данный скрипт позволяет прочитать модель из xml файла, и прочитать карту из json файла, а также осуществить визуализацию при помощи библиотеки Escher. Также функция react_resemblance, позволяет сравнить различия в количестве реакций между картой и моделью.
+##### This script allows you to read the model from the xml file, and read the map from the json file, and also render with the Escher library. Also the function react_resemblance, allows you to compare the differences in the number of reactions between the card and the model.
 
+## Used soft
 
-## Использованные программы
+##### Python 3.6.3 interpretator
+##### Cobrapy library for Python: cobra (version 0.11.3) (https://cobrapy.readthedocs.io/en/latest/)
+##### Pandas library for Python:  pandas (version 0.22.0)
+##### Escher library for the visualization: Escher (version 1.6.0.)
+##### A map for visualization with the use of Escher: RECON1.COMBINED.json (https://github.com/escher/community-maps/blob/master/RECON1/RECON1.COMBINED.json)
+##### Numerical solutions soft (solvers): cplex, Gurobi Optimization
 
-##### Интерпретатор Python 3.6.3
-##### Библиотека Cobrapy для Python: cobra (version 0.11.3) (https://cobrapy.readthedocs.io/en/latest/)
-##### Библиотека Pandas для Python:  pandas (version 0.22.0)
-##### Библиотека Escher для визуализации: Escher (version 1.6.0.)
-##### Карта для визуализации с использованием Escher: RECON1.COMBINED.json (https://github.com/escher/community-maps/blob/master/RECON1/RECON1.COMBINED.json)
-##### Программы для численного решения (солверы): cplex, Gurobi Optimization
-
-## Литература
+## Literature
 ##### 1. Aarash Bordbar et al., (2012)  Model-driven multi-omic data analysis elucidates metabolic immunomodulators of macrophage activation.  Molecular Systems Biology 8:558
 ##### 2. Natalie C. Duarte et al., (2006) Global reconstruction of the human metabolic network based on genomic and bibliomic data.  PNAS 104(6):1777–1782
 ##### 3. P. Kent Langston et al., (2017) Metabolism Supports Macrophage Activation. Front. Immunol. 8:61.
