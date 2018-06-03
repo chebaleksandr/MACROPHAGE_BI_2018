@@ -76,6 +76,8 @@ RECON = json.loads(json_string)
 ##### Escher library for the visualization: Escher (version 1.6.0.)
 ##### A map for visualization with the use of Escher: RECON1.COMBINED.json (https://github.com/escher/community-maps/blob/master/RECON1/RECON1.COMBINED.json)
 ##### Numerical solutions soft (solvers): cplex, Gurobi Optimization
+##### MetaNetX Automated Model Construction and Genome Annotation for Large-Scale Metabolic Networks (https://www.metanetx.org/)
+
 
 ## Literature
 ##### 1. Aarash Bordbar et al., (2012)  Model-driven multi-omic data analysis elucidates metabolic immunomodulators of macrophage activation.  Molecular Systems Biology 8:558
@@ -86,7 +88,9 @@ RECON = json.loads(json_string)
 ##### 6. Anna S. Blazier and Jason A. Papin. (2012) Integration of expression data in genome-scale metabolic network reconstructions. Front.      Physiol. 3:299
 ##### 7. Jeffrey D Orth et al., (2010) What is flux balance analysis? nature biotechnology 28(3): 245-248
 ##### 8. Gudmundsson, S., Thiele, I. Computationally efficient flux variability analysis. BMC Bioinformatics. 11, 489 (2010).
-
+##### 9. Sébastien Moretti et al., (2016) MetaNetX/MNXref - reconciliation of metabolites and biochemical reactions to bring together genome-scale metabolic networks. Nucleic Acids Research., 44(D1):D523-D526   
+##### 10. Mathias Ganter et al., (2013) MetaNetX.org: a website and repository for accessing, analysing and manipulating metabolic networks, Bioinformatics, 29(6):815-816 
+##### 11. Thomas Bernard et al., (2014) MReconciliation of metabolites and biochemical reactions for metabolic networks, Briefings in Bioinformatics, 15(1):123-135
 
 
 
