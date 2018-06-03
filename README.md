@@ -51,7 +51,7 @@ Number of genes in the model 768
 ##### To run the script, you must download files (out.csv, MetaNetX_annot.txt, MetaNetX_analysis.txt, MetaNetX_gene_reaction.txt, met_lethal_sum1.txt), install all necessary libraries, and also set the path to the folder with all files.
 ##### This script allows you to read the the results of FVA analysis, annotate and visualize them.
 #### Examples of visualization:
-![All groups](https://github.com/chebaleksandr/MACROPHAGE_BI_2018/blob/master/all_rko.tiff)
+![All groups](https://github.com/chebaleksandr/MACROPHAGE_BI_2018/blob/master/all_rko.png)
 
 
 #### Macrophage_Model.py (А. Cheblokov): 
