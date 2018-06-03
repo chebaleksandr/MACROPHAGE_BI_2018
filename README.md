@@ -11,7 +11,9 @@
 
 ## Short description of the used methods
 
-##### Method: FBA (flux balance analysis): Under the conditions of our steady state, the result of multiplying the stoichiometric matrix, composed of all the cell responses, by the flow rate through these reactions is zero.
+##### Methods: 
+* FBA (flux balance analysis): Under the conditions of our steady state, the result of multiplying the stoichiometric matrix, composed of all the cell responses, by the flow rate through these reactions is zero.
+* FVA (Flux Variability Analysis): Method for evaluating the minimum and maximum range of each reaction flux that can still satisfy the constraints using a double LP problem (i.e. a maximization and a subsequent minimization) for each reaction of interest.
 
 ## Contents of the repository
 
@@ -26,7 +28,7 @@
 ##### RAW264_7_v2.xml
 ##### RAW264_7_v3.xml
 
-## Skipts
+## Skripts
 #### IB_project_30_03_18.py (N.Rodina):
 ##### To run the script, you must download the required model, install all necessary libraries (see the Used programs section), and also change the path to the model for your computer in the script:
 
@@ -45,8 +47,14 @@ Number of genes in the model 768
 <Solution 0.062 at 0xa1f93b7e48>
 ```
 ##### Results of the FVA-analysis are written to a csv-file (out.csv).
+#### fva_analysis.r (N.Rodina):
+##### To run the script, you must download files (out.csv, MetaNetX_annot.txt, MetaNetX_analysis.txt, MetaNetX_gene_reaction.txt, met_lethal_sum1.txt), install all necessary libraries, and also set the path to the folder with all files.
+##### This script allows you to read the the results of FVA analysis, annotate and visualize them.
+#### Examples of visualization:
+![All groups](https://github.com/chebaleksandr/MACROPHAGE_BI_2018/blob/master/all_rko.tiff)
 
-##### Macrophage_Model.py (А. Cheblokov): 
+
+#### Macrophage_Model.py (А. Cheblokov): 
 ##### To run the script, you must download the required model, install all necessary libraries (see the Used programs section), and also change the path to the model for your computer in the script:
 ```
 mdl=cobra.io.read_sbml_model('/home/aleksandr/Downloads/RAW264_7_v3.xml')
@@ -77,8 +85,7 @@ RECON = json.loads(json_string)
 ##### 5. Ryan DG, O’Neill LA. (doi: 10.1002/1873-3468.12744)
 ##### 6. Anna S. Blazier and Jason A. Papin. (2012) Integration of expression data in genome-scale metabolic network reconstructions. Front.      Physiol. 3:299
 ##### 7. Jeffrey D Orth et al., (2010) What is flux balance analysis? nature biotechnology 28(3): 245-248
-
-
+##### 8. Gudmundsson, S., Thiele, I. Computationally efficient flux variability analysis. BMC Bioinformatics. 11, 489 (2010).
 
 
 
